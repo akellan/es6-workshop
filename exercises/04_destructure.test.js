@@ -105,7 +105,7 @@ test('can reach nested arrays', () => {
 http://ws.kcd.im/?ws=ES6+and+Beyond&e=Destructuring&em=
 */
 test('I submitted my elaboration and feedback', () => {
-  const submitted = true // change this when you've submitted!
+  const submitted = false // change this when you've submitted!
   expect(true).toBe(submitted)
 })
 ////////////////////////////////
