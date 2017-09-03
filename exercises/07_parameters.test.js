@@ -94,7 +94,7 @@ test('it can default all arguments, optionally', () => {
   // Modify the method signature of `myFunction` to allow for
   // all args to be optional
 
-  function myFunction(name = 'Name', age = 67, favoriteBand= 'dd') {
+  function myFunction({name = 'Name', age = 67, favoriteBand= 'dd'} = {}) {
     expect(name).toBeDefined()
     expect(age).toBeDefined()
     expect(favoriteBand).toBeDefined()
