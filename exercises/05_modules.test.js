@@ -1,4 +1,6 @@
 import * as Mathy from '../common/Mathy'
+import {sqrt as mySqrt, square as mySquare} from '../common/Mathy'
+import _ from 'lodash'
 // WRITE YOUR IMPORT STATEMENTS HERE
 
 test('can import Mathy', () => {
@@ -26,7 +28,7 @@ test('can import from my node_modules', () => {
 http://ws.kcd.im/?ws=ES6+and+Beyond&e=Modules&em=
 */
 test('I submitted my elaboration and feedback', () => {
-  const submitted = false // change this when you've submitted!
+  const submitted = true // change this when you've submitted!
   expect(true).toBe(submitted)
 })
 ////////////////////////////////
