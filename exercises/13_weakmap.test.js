@@ -1,6 +1,10 @@
 test('has a set method', () => {
   const key = {name: 'Aaron'}
   const value = {twitter: '@js_dev', gplus: '+AaronFrost'}
+
+  const myMap = new Map()
+
+  myMap.set(key, value)
   // Create a new WeakMap called 'myMap'
   // Add a new entry. Use key as the key and values as the value
   expect(myMap.has(key)).toBe(true)
@@ -9,17 +13,19 @@ test('has a set method', () => {
 test(`should enable private members in classes`, () => {
   // If you make it this far, write a class with private member variables, using WeakMaps
   class Person {
+
     constructor(name, age) {
-      this._name = name
-      this._age = age
+      this.members = new WeakMap()
+      this.members.set(this.getName, name)
+      this.members.set(this.getAge, age)
     }
 
     getName() {
-      return this._name
+      return this.members.get(this.getName)
     }
 
     getAge() {
-      return this._age
+      return this.members.get(this.getAge)
     }
   }
 
@@ -35,7 +41,7 @@ test(`should enable private members in classes`, () => {
 http://ws.kcd.im/?ws=ES6+and+Beyond&e=WeakMaps&em=
 */
 test('I submitted my elaboration and feedback', () => {
-  const submitted = false // change this when you've submitted!
+  const submitted = true // change this when you've submitted!
   expect(true).toBe(submitted)
 })
 ////////////////////////////////
